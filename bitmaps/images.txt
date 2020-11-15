@@ -1,4 +1,6 @@
-1. ASTYLE.bmp
-2. astyler.bmp
-3. astyler_ansi.bmp
-4. astyler_gnu.bmp
+1. ASTYLE.bmp (https://i.imgur.com/GOYuVrF.png)
+2. astyler.bmp (https://i.imgur.com/ZaCeWz7.png)
+3. astyler_ansi.bmp (https://i.imgur.com/KWwM2Dc.png)
+4. astyler_gnu.bmp (https://i.imgur.com/Jw5CMZ2.png)
+
+Convert the files to BMP format after downloading.
