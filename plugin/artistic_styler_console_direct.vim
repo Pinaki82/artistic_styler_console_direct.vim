@@ -9,6 +9,16 @@
 "  Artistic Styler code beautifier (Style Java) (1) , (Style GNU) (2) , (Style ANSI) (3)
 "  =====================================================================================
 
+" http://vi.stackexchange.com/questions/2572/detect-os-in-vimscript
+" google: detecting os from vimscript
+if !exists("g:osdetected")
+    if has("win64") || has("win32") || has("win16")
+        let g:osdetected = "Windows"
+    else
+        let g:osdetected = substitute(system('uname'), '\n', '', '')
+    endif
+endif
+
 function! Astyle_1()
   if g:osdetected == "Windows"
     :silent!!cmd /c cmd /c astyle --style=java --indent=spaces=2 --attach-namespaces --attach-classes --attach-inlines --attach-extern-c --attach-closing-while --indent-classes --indent-modifiers --indent-switches --indent-cases --indent-namespaces --indent-continuation=4 --indent-labels --indent-preproc-block --indent-preproc-define --indent-col1-comments --min-conditional-indent=1 --max-continuation-indent=70 --break-blocks=all --pad-oper --pad-comma --unpad-paren --delete-empty-lines --align-pointer=name --align-reference=name --break-closing-braces --break-one-line-headers --add-braces --attach-return-type --attach-return-type-decl --keep-one-line-statements --convert-tabs --remove-comment-prefix --mode=c "%:p"
