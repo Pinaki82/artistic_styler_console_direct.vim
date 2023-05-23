@@ -138,4 +138,7 @@ map <silent> <leader>ft2 <Esc>:call Astyle_3() :call winrestview(view) <CR><CR>
 "   ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 
 command! Was :call FormatAndSave() :call winrestview(view) <CR><CR>
+:tmenu icon=$HOME/\/.vim/bitmaps/ASTYLE.bmp 1.267 ToolBar.astyle4 Write & Format C/C++ code (style java)   :Was
+:menu ToolBar.astyle4 <Esc>:call FormatAndSave() :call winrestview(view) <CR><CR>
+"   ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 
