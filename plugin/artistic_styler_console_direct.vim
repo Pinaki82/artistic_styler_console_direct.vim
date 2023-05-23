@@ -100,6 +100,10 @@ function! Astyle_3()
   :execute 'normal! \<ESC>\<ESC>'
 endfunction
 
+function! FormatAndSave()
+  :w
+  :call Astyle_1()
+endfunction
 
 "   ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 if g:osdetected == "Windows"
@@ -132,4 +136,6 @@ endif
 map <silent> <leader>ft2 <Esc>:call Astyle_3() :call winrestview(view) <CR><CR>
                        " ft2 * Astyle_3 * (Style ANSI)
 "   ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+
+command! Was :call FormatAndSave() :call winrestview(view) <CR><CR>
 
